@@ -1,0 +1,16 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/style.css';
+import './css/fonts.css';
+import './css/fontello.css';
+import './css/gglcptch.css';
+import './css/inline.css';
+import './css/wp-content/themes/animate.css';
+import './css/wp-content/themes/jquery.fullPage.css';
+import './css/wp-content/themes/assets/style.css';
+import './css/wp-content/themes/home/style.min.css';
+import './css/wp-content/themes/selectize.default.css';
+import './css/wp-content/themes/jquery.mCustomScrollbar.min.css';
+import './css/wp-content/themes/small-device-popup/style.css';
+import './css/wp-content/themes/assets/tooltipster.bundle.css';
+import './css/wp-content/themes/assets/tooltipster-sideTip-light.min.css';
+import './css/wp-content/themes/contact-us-button/style.css';

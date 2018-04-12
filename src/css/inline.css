@@ -1,0 +1,68 @@
+#header-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* in case the video doesn't fit the whole page*/
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    /*cover video background */
+    background-image: url("https://newaxonactive-6113.kxcdn.com/wp-content/themes/axon-v3/video/bg.jpg");
+    z-index: 3;
+}
+
+.header-content>div {
+    /* display: none */
+}
+
+#section0 .layer {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    left: 0;
+    top: 33%;
+    /* 
+		* Preventing flicker on some browsers 
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+
+#section0 {
+    overflow: hidden;
+    vertical-align: middle
+}
+
+/* Bottom menu
+	* --------------------------------------- */
+
+#infoMenu li a {
+    color: #fff;
+}
+
+/* Hiding video controls 
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+
+video::-webkit-media-controls {
+    display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    #header-video {
+        background-image: url("https://newaxonactive-6113.kxcdn.com/wp-content/themes/axon-v3/video/bg-mobile.jpg");
+    }
+}
+
+#section10 ul { list-style: none;}
+#section10 .contact-info-detail.active{ display: block;}

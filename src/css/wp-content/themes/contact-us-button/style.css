@@ -1,0 +1,125 @@
+.button-contact-us{
+    position: relative;
+}
+
+.button-contact-us__around {
+    position: fixed !important;
+    right: 93px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    background-image: url('../../../../img/contact-button.svg');
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 5;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 50%;
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 120px;
+}
+
+.button-contact-us:hover .button-contact-us__around{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: swing;
+    animation-name: swing;
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.button-contact-us.show {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    /* .button-contact-us {
+        top: 100%;
+        margin-top: -70px;
+        right: 0;
+    } */
+    .button-contact-us__label {
+        /* left: 70px; */
+    }
+    .go-top {
+        margin-bottom: 70px;
+    }
+}
+
+.button-contact-us__label {
+    display: none;
+    color: #424242;
+    font-size: 14px;
+    position: fixed;
+    font-weight: normal;
+    right: 140px;
+    text-align: center;
+    z-index: 9;
+    cursor: pointer;
+    top: 50%;
+    line-height: 35px;
+    margin-top: 120px;
+    font-family: "Roboto Condensed";
+    font-style: italic;
+    font-size: 14px;
+}
+
+.button-contact-us:hover .button-contact-us__label {
+    display: block;
+}
+
+@media screen and (max-width: 1600px) {
+    .button-contact-us__around {
+        right: 46px
+    }
+    .button-contact-us__label {
+        right: 90px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .button-contact-us__around {
+        bottom: 33px;
+        right: 15px;
+        top: unset;
+    }
+    .button-contact-us__label{
+        bottom: 37px;
+        right: 65px;
+        top: unset;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .button-contact-us__around {
+        background-image: url('../../../../img/contact-button-mobile.svg');
+        right: 0px;
+    }
+    .button-contact-us__label{
+        right: 50px;
+    }
+    .button-contact-us:hover .button-contact-us__around{
+       -webkit-animation: none;
+               animation: none;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    /* .button-contact-us {
+        right: 4rem
+    } */
+}
+
+
+/* responsive */
+
+
+/* end responsive */
