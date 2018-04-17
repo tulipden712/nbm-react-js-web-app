@@ -17,6 +17,7 @@ console.log('LIB_DIR', LIB_DIR);
 
 module.exports = (env = {}) => {
     return {
+        context: path.resolve(__dirname),
         entry: {
             index: [SRC_DIR + '/index.js'],
             libraries: [SRC_DIR + '/jsModule.js']
@@ -42,20 +43,21 @@ module.exports = (env = {}) => {
             // './src/library/wp-includes/wp-embed.min.js'
         // ])),
         output: {
-            path: BUILD_DIR,
+            path: path.resolve(__dirname, './build'),
             filename: '[name].bundle.js',
-            chunkFilename: '[name].bundle.js'
+            chunkFilename: '[name].bundle.js',
+            publicPath: '/',
         },
         //mode: NODE_ENV,
         // watch: true,
         devtool: env.prod ? 'source-map' : 'cheap-module-eval-source-map',
-        devServer: {
-            contentBase: BUILD_DIR,
-            port: 9001,
-            compress: true,
-            hot: true,
-            open: true
-        },
+        // devServer: {
+        //     contentBase: BUILD_DIR,
+        //     port: 9001,
+        //     compress: true,
+        //     hot: true,
+        //     open: true
+        // },
         resolve: {
             alias: {
                 //xyz: 'src/library'
@@ -74,7 +76,7 @@ module.exports = (env = {}) => {
                         loader: 'babel-loader',
                         options: {
                             cacheDirectory: true,
-                            presets: ['react', 'env']
+                            presets: ['es2015','react', 'env']
                         }
                     }
                 },

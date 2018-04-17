@@ -1,19 +1,51 @@
 import React, { Component } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+
+import Home from './views/Home/';
+import AboutUs from './views/AboutUs/';
+import Careers from './views/Careers/';
+import Contact from './views/Contact/';
+import NewsEvent from './views/NewsEvent/';
+import Services from './views/Services/';
 import Header from './js/Header';
-import Section0 from './js/Section0';
-import Section1 from './js/Section1';
-import Section2 from './js/Section2';
-import Section3 from './js/Section3';
-import Section4 from './js/Section4';
-import Section5 from './js/Section5';
-import Section6 from './js/Section6';
-import Section7 from './js/Section7';
-import Section8 from './js/Section8';
-import Section9 from './js/Section9';
-import Section10 from './js/Section10';
+
 import './cssModule.js';
 import $ from "jquery";
 import jQuery from "jquery";
+
+const routes = [
+	{
+		path: "/",
+		exact: true,
+		sidebar: Home,
+		main: () => <h2>Home</h2>
+	},
+	{
+		path: "/services",
+		sidebar: Services,
+		main: () => <h2>Services</h2>
+	},
+	{
+		path: "/about-us",
+		sidebar: AboutUs,
+		main: () => <h2>About-us</h2>
+	},
+	{
+		path: "/news-events",
+		sidebar: NewsEvent,
+		main: () => <h2>News-events</h2>
+	},
+	{
+		path: "/careers",
+		sidebar: Careers,
+		main: () => <h2>Careers</h2>
+	},
+	{
+		path: "/contact",
+		sidebar: Contact,
+		main: () => <h2>Contact</h2>
+	}
+];
 
 class App extends Component {
 	render() {
@@ -28,21 +60,24 @@ class App extends Component {
 									<div id="primary" className="fp-content-area">
 										<main id="main" className="site-main" role="main">
 											<div className="entry-content">
-												<div id="fullpage">
-													<Section0 />
-													<Section1 />
-													<Section2 />
-													<Section3 />
-													<Section4 />
-													<Section5 />
-													<Section6 />
-													<Section7 />
-													<Section8 />
-													<Section9 />
-													<Section10 />
-													{/* <div className="section fp-auto-height-responsive" id="location-mobile"></div>
-													<div className="section fp-auto-height-responsive" id="footer-mobile"></div> */}
-												</div>
+												<Switch>
+													{routes.map((route, index) => (
+														// You can render a <Route> in as many places
+														// as you want in your app. It will render along
+														// with any other <Route>s that also match the URL.
+														// So, a sidebar or breadcrumbs or anything else
+														// that requires you to render multiple things
+														// in multiple places at the same URL is nothing
+														// more than multiple <Route>s.
+														<Route
+															key={index}
+															path={route.path}
+															exact={route.exact}
+															component={route.sidebar}
+														/>
+													))}
+													<Redirect from="/" to="/home" />
+												</Switch>
 											</div>
 											<div className="button-contact-us">
 												<a href="/contact"><span className="button-contact-us__around"></span></a>
