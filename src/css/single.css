@@ -1,0 +1,21 @@
+.section {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    min-height: 100%;
+    padding-bottom: 10rem;
+}
+.footer-section.pc-only {
+    display: block;
+}
+.contact-us {
+    display: block;
+}
+
+@media only screen and (max-width: 991px) {
+    #section10, #footer-mobile, #location-mobile {
+        padding-top: 5rem;
+        padding-bottom: 0;
+    }
+}

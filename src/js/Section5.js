@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Section5 extends Component {
     render() {
         return (
-            <div className="section fp-auto-height-responsive" id="section5">
+            <div className="section" id="section5">
                 <img data-src="https://newaxonactive-6113.kxcdn.com/wp-content/themes/axon-v3/page-templates/home/sections/industry-expertise/img/bg.jpg"
                     alt="" className="lazy-bg" />
                 <div className="container">

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import FullPage from '../Pages/FullPage';
+import Section10 from '../../js/Section10';
 
 class AboutUs extends Component {
     render() {
         return (
-            <div>
-                AboutUs
-            </div>
+            <FullPage location={this.props.location}>
+                AboutUs<Section10 />
+            </FullPage>
         );
     }
 }

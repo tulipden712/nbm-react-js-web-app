@@ -15,8 +15,7 @@ import jQuery from "jquery";
 
 const routes = [
 	{
-		path: "/",
-		exact: true,
+		path: "/home",
 		sidebar: Home,
 		main: () => <h2>Home</h2>
 	},
@@ -56,33 +55,33 @@ class App extends Component {
 					<div className="">
 						<div id="content" className="page-wrap aa-main-content">
 							<div className="content-wrapper">
-								<div className="">
+								<div>
 									<div id="primary" className="fp-content-area">
 										<main id="main" className="site-main" role="main">
 											<div className="entry-content">
 												<Switch>
-													{routes.map((route, index) => (
-														// You can render a <Route> in as many places
-														// as you want in your app. It will render along
-														// with any other <Route>s that also match the URL.
-														// So, a sidebar or breadcrumbs or anything else
-														// that requires you to render multiple things
-														// in multiple places at the same URL is nothing
-														// more than multiple <Route>s.
+													{/* {routes.map((route, index) => (
 														<Route
 															key={index}
 															path={route.path}
 															exact={route.exact}
 															component={route.sidebar}
 														/>
-													))}
+													))} */}
+													<Route path="/home" name="Home" component={Home} />
+													<Route path="/about-us" name="AboutUs" component={AboutUs} />
+													<Route path="/careers" name="Careers" component={Careers} />
+													<Route path="/news-events" name="NewsEvent" component={NewsEvent} />
+													<Route path="/services" name="Services" component={Services} />
+													<Route path="/contact" name="Contact" component={Contact} />
 													<Redirect from="/" to="/home" />
 												</Switch>
 											</div>
 											<div className="button-contact-us">
 												<a href="/contact"><span className="button-contact-us__around"></span></a>
 												<span className="button-contact-us__label">Get a quote</span>
-											</div>                                                                          <div className="rotate-device">
+											</div>
+											<div className="rotate-device">
 												<div className="d-flex justify-content-center align-items-center w-100 h-100">
 													<div className="rotate-device__button">
 														<div className="rotate-device__button-close p-1">

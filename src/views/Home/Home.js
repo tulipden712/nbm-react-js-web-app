@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import loadjs from 'loadjs';
 
+import FullPage from '../Pages/FullPage';
 import Section0 from './../../js/Section0';
 import Section1 from './../../js/Section1';
 import Section2 from './../../js/Section2';
@@ -13,9 +15,13 @@ import Section9 from './../../js/Section9';
 import Section10 from './../../js/Section10';
 
 class Home extends Component {
+	componentDidMount(){
+
+	}
+
 	render() {
 		return (
-			<div id="fullpage">
+			<FullPage location={this.props.location}>
 				<Section0 />
 				<Section1 />
 				<Section2 />
@@ -29,7 +35,7 @@ class Home extends Component {
 				<Section10 />
 				{/* <div className="section fp-auto-height-responsive" id="location-mobile"></div>
             <div className="section fp-auto-height-responsive" id="footer-mobile"></div> */}
-			</div>
+			</FullPage>
 		);
 	}
 }

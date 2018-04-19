@@ -39,6 +39,7 @@
     "html-webpack-plugin": "^3.2.0",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
+    "loadjs": "^3.5.4",
     "microplugin": "^0.0.3",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.3",

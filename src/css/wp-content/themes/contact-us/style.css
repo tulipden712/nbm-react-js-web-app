@@ -1,0 +1,303 @@
+/* #section10,
+#footer-mobile,
+#location-mobile {
+    background-image: url(../img/bg.jpg);
+} */
+
+.contact-us {
+    display: none;
+}
+
+.contact-us-content__detail__mail-link {
+    text-decoration: none;
+    color: #02A9F7;
+}
+
+.contact-us-content__detail__mail-link:hover {
+    text-decoration: none;
+    color: #02A9F7;
+}
+
+.contact-us-content__detail__contact {
+    list-style: none;
+    color: #424242;
+}
+
+.contact-us-content__detail input {
+    border: 1px solid #424242;
+}
+
+.contact-us-content__detail textarea {
+    border: 1px solid #424242;
+    border-radius: 0px;
+}
+
+.contact-us-content__detail input,
+.contact-us-content__detail textarea {
+    /* font-style: italic; */
+    padding-left: 8px;
+    background: transparent;
+    font-size: .8rem;
+}
+
+.contact-us-content__detail input:focus,
+.contact-us-content__detail textarea:focus {
+    background: transparent;
+    border: 1px solid #424242;
+    box-shadow: unset;
+    color: #424242;
+}
+
+.contact-us-content__detail .explore-btn {
+    border: 1px solid #424242;
+    cursor: pointer;
+}
+
+.contact-us-content__detail .explore-btn:hover {
+    background-color: #02A9F7;
+    border-color: #02A9F7;
+}
+
+.contact-us-content__detail__contact-head a {
+    color: #424242;
+    text-decoration: none;
+    font-size: .8rem;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+    font-style: italic;
+}
+
+.contact-us-content__detail__contact-head a:hover {
+    color: #02A9F7;
+}
+
+.contact-us-content__detail__contact-add {
+    color: #424242;
+    font-size: .8rem;
+}
+
+.contact-us-content__detail__contact-add__prefix {
+    /* font-style: italic; */
+}
+
+.contact-us-content__detail__contact-add__desc a{
+    color: #02A9F7 !important;
+    font-weight: 300;
+}
+
+.contact-us-content__detail__contact-head img {
+    width: 13px;
+}
+
+.contact-us-content__detail-footer ul {
+    list-style: none;
+}
+
+.contact-us-content__detail-footer a {
+    color: #424242;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.contact-us-content__detail-footer-menu-link {
+    font-size: .8em;
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+.contact-us-content__detail-footer-menu-link a:hover {
+    color: #02A9F7;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    /* padding-top: 1em; */
+    font-family: 'Roboto Condensed'!important;
+}
+
+.contact-info-detail {
+    display: none
+}
+
+.contact-info-detail.active {
+    display: block
+}
+
+.footer-coppy-right,
+.footer-coppy-right a {
+    color: #FFFFFF;
+}
+
+.footer-coppy-right {
+    background-color: #424242;
+    font-size: 14px;
+    padding: 0px 0px;
+}
+
+@media only screen and (max-width: 991px) {
+    .footer {
+        position: relative;
+        height: 100%;
+    }
+    .footer-coppy-right {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .contact-us ul,
+    #footer-mobile ul {
+        padding-left: 0
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact-us-content__detail__contact-add,
+    .contact-us-content__detail__contact-head a,
+    .contact-us-content__detail-footer-menu-link {
+        font-size: 14px;
+    }
+    .footer {
+        background-color: unset !important;
+    }
+}
+
+.contact-us-validation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    top: 0;
+    display: block;
+}
+
+.contact-us-validation.show{
+    display: block;
+}
+
+.contact-us-validation.hide{
+    display: none;
+}
+
+.contact-us-validation__close_btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-image: url('../../../../img/close-button.svg');
+    width: 10px;
+    height: 10px;
+    z-index: 9;
+    background-size: 10px 10px;
+    cursor: pointer;
+}
+
+
+.aavn-contact-us-form-data input.error {
+    border: 1px solid #ae323b;
+}
+
+.aavn-contact-us-form-data textarea.error {
+    border: 1px solid #ae323b;
+}
+
+/* .aavn-contact-us-form-data label.error {
+    font-size: .7rem;
+    color: #ae323b;
+    position: absolute;
+    bottom: -37px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .aavn-contact-us-form-data label.error {
+        position: relative;
+        bottom: 0px;
+    }
+} */
+
+#hidden_recaptcha{
+    height: 0px;
+    padding: 0px;
+    border: 0px;
+    position: absolute;
+    top: 40%;
+}
+
+
+
+/* responsive */
+
+
+
+@media only screen and (max-width:2560px) {
+    .contact-us-content__detail-footer {
+        font-size: 27px;
+    }
+}
+
+@media only screen and (max-width:1856px) {
+    .contact-us-content__detail-footer {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:1600px) {
+    .contact-us-content__detail-footer {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width:1440px) {
+    .contact-us-content__detail-footer {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .contact-us-content__detail-footer {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-us-content__detail-footer {
+        font-size: 16px
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #section10, #footer-mobile, #location-mobile{
+        background-image: none;
+    }
+    .hr-line {
+        position: relative;
+    }
+
+    .hr-line img{
+        position: absolute;
+        top:-16px;
+        margin-left: -16px;
+    }
+
+    .footer {
+        background-color: #FFFFFF !important;
+    }
+    .footer-section.mobile-only .mobile-title {
+        background-image: url('../../../../img/mobile-title-bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .contact-us-content__detail__contact-add,
+    .contact-us-content__detail__contact-head a,
+    .contact-us-content__detail-footer-menu-link, 
+    .contact-us-content__detail-footer {
+        font-size: 1rem;
+    }
+}
+/* @media only screen and (max-width: 767px) {
+    .contact-us-content__detail-footer {
+        font-size: 14px
+    }
+} */
